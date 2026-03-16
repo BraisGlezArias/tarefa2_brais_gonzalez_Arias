@@ -24,10 +24,11 @@ for codigo in codigos:
     usuarios[codigo] = datos
 
     print(
-        f"""\nUsuario {codigo}: {usuarios[codigo]["nome"]} | 
-        {usuarios[codigo]["dirección"]} | 
-        {usuarios[codigo]["correo electrónico"]} | 
-        {usuarios[codigo]["teléfono"]}"""
+        f"\nUsuario {codigo}"
+        f"\nNome: {datos['nome']}"
+        f"\nDirección: {datos['dirección']}"
+        f"\nCorreo electrónico: {datos['correo electrónico']}"
+        f"\nTeléfono: {datos['teléfono']}"
     )
 
 # Seleccionamos un valor aleatorio de entre los códigos.
@@ -35,5 +36,5 @@ ganador = random.choice(list(codigos))
 
 print(f"\nO usuario chamado {usuarios[ganador]['nome']} foi o afortunado!\n")
 
-# Debes desenvolver o programa empregando Git e GitHub.
-# Repositorio: https://github.com/BraisGlezArias/tarefa2_brais_gonzalez_Arias.git
+# Este código también esta disponible en mi repositorio de GitHub:
+# https://github.com/BraisGlezArias/tarefa2_brais_gonzalez_Arias.git
