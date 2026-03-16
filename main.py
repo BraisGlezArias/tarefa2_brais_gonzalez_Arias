@@ -36,5 +36,5 @@ ganador = random.choice(list(codigos))
 
 print(f"\nO usuario chamado {usuarios[ganador]['nome']} foi o afortunado!\n")
 
-# Este código también esta disponible en mi repositorio de GitHub:
+# Este código también esta disponible en el siguiente repositorio de GitHub:
 # https://github.com/BraisGlezArias/tarefa2_brais_gonzalez_Arias.git
