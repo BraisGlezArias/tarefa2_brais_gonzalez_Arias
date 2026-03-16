@@ -1,25 +1,28 @@
 from faker import Faker
 import random
 
-fake = Faker()
+fake = Faker("es_ES")
 
 codigos = set(list(range(1, 16)))
 
 usuarios = dict([])
 
 for codigo in codigos:
-    datos = dict(
-        [
-            ("nome", fake.name()),
-            ("dirección", fake.address()),
-            ("correo electrónico", fake.email()),
-            ("teléfono", fake.phone_number()),
-        ]
-    )
+    datos = {
+            "nome": fake.name(),
+            "dirección": fake.address(),
+            "correo electrónico": fake.email(),
+            "teléfono": fake.phone_number()
+    }
 
     usuarios[codigo] = datos
 
-print(usuarios)
+    print(
+        f"\nUsuario {codigo}: {usuarios[codigo]['nome']} | "
+        f"{usuarios[codigo]['dirección']} | "
+        f"{usuarios[codigo]['correo electrónico']} | "
+        f"{usuarios[codigo]['teléfono']}"
+    )
 
 ganador = random.choice(list(codigos))
 
