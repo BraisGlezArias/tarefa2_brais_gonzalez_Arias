@@ -1,4 +1,5 @@
 from faker import Faker
+import random
 
 fake = Faker()
 
@@ -19,3 +20,7 @@ for codigo in codigos:
     usuarios[codigo] = datos
 
 print(usuarios)
+
+ganador = random.choice(list(codigos))
+
+print(f"\nO usuario chamado {usuarios[ganador]['nome']} foi o afortunado!\n")
